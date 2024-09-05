@@ -44,7 +44,6 @@ public class DataStore {
 				System.out.println("Data is successfully inserted...!");
 				con.commit();
 				flag=true;	
-				System.out.println("If condn");
 			}else {
 				con.rollback();
 				System.out.println("else block");
@@ -58,7 +57,7 @@ public class DataStore {
 				System.out.println("in try-2..");
 			}catch(SQLException e1) {
 				e1.printStackTrace();
-				System.out.println("in caatch-1..");
+				System.out.println("in catch-1..");
 			}
 		}finally {
 			try {
@@ -148,5 +147,7 @@ public class DataStore {
 		}
 		
 	}
+	
+	pu
 
 }

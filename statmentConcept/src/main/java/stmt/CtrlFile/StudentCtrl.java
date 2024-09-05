@@ -6,6 +6,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import stmt.AddStdInfo.AddStudent;
+import stmt.DaoFiles.CallobleStmtDao;
 import stmt.DaoFiles.DataStore;
 
 import java.io.IOException;
@@ -37,9 +38,10 @@ public class StudentCtrl extends HttpServlet {
 		std.setBranch(request.getParameter("branch"));
 		std.setBlood_grp(request.getParameter("Bgrp"));
 		System.out.println("in StudentCtrlfile....");
-		DataStore info =new DataStore();
 		String msg=null;
-		if(info.insertSutdent(std)) {
+		//DataStore info =new DataStore();
+		CallobleStmtDao  callStmt= new CallobleStmtDao();
+		if(callStmt.insertSutdents(std)) {
 			msg="Inserted Successfully...!";
 		}else {
 			msg="There is some Issue...!";
