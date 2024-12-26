@@ -13,7 +13,7 @@ public class DataStore {
 	public static Connection getConnection() throws ClassNotFoundException, SQLException {
 		String url="jdbc:mysql://localhost:3306/statementconcepts";
 		String user_name="root";
-		String pwd="Ritik@2004!kr.";
+		String pwd="root";
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		return DriverManager.getConnection(url,user_name,pwd);
 	}
